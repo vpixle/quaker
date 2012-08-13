@@ -1,0 +1,8 @@
+-qwr20%e3C2t%P%s%uN100%I0p7DaK0c2H0%kf2A25000%f0#f -F "" -%F "" -%l "cz, en, *" http://quaker.vpixle.com -O1 "C:\\wamp\\www\\whtt\\quaker" +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+File generated automatically on Mon, 13 Aug 2012 10:43:34, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

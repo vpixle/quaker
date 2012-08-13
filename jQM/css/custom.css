@@ -1,0 +1,44 @@
+/***************************************
+ *  Item Box
+ ****************************************/
+.item {
+  padding: 1em;
+  margin: 0em 0em 1em;
+  background :#fff;
+  align: center;
+  /*font-size: 90%;*/
+  filter : progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eeeeee');
+  background-image : -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
+  background-image : -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background-image :    -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background-image :     -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background-image :      -o-linear-gradient(top, #ffffff, #eeeeee);
+  background-image :         linear-gradient(top, #ffffff, #eeeeee);
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+  border-radius: .6em;
+  -moz-border-radius: .6em;
+  -webkit-border-radius: .6em;
+}
+/***************************************
+ *  CSS3 pattern
+ ****************************************/
+.ui-body-g{
+  background-color: #125687;
+  background-image: 
+  -webkit-gradient(linear, 100% 0%, 0% 100%, 
+  from(transparent), 
+  color-stop(0.15, transparent),  
+  color-stop(0.15, rgba(255,200,46,0.75)), 
+  color-stop(0.50, rgba(255,200,46,0.75)), 
+  color-stop(0.50, transparent), 
+  color-stop(0.65, transparent),
+  color-stop(0.65, rgba(255,200,46,0.75)),  
+  to(rgba(255,288,46,0.75)));
+  ffbackground-color: #125687;
+  -webkit-background-size: 10px 10px
+}
+
+.ui-field-contain div.ui-slider-switch { width: 11em; }
+/*.longer-switch .ui-slider-switch { width: 15em } */

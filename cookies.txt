@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+quaker.vpixle.com	TRUE	/	FALSE	1999999999	PHPSESSID	9e1b9134c2071423b3790fcbd636a4e7
+
