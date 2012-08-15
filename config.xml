@@ -2,7 +2,7 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "cz.theotherz.QuakerApp"
-	version 	= "1.0.0">
+	version 	= "2.0.0">
 
 	<name>Quaker Mobile App</name>
 
@@ -16,6 +16,7 @@
 	</author>
 
 	<gap:platforms>
+	  <gap:platform name="ios" />
 		<gap:platform name="android" minVersion="2.1" />
 		<gap:platform name="webos" />
 		<gap:platform name="symbian.wrt" />
@@ -25,7 +26,8 @@
 	<icon src="blurry.png" gap:role="default" />
 
     <gap:splash src="weirdo.png" />
-
+    
+  <preference name="ios-statusbarstyle" value="black-opaque" />
 	<!--<feature name="http://api.phonegap.com/1.0/geolocation"/> -->
 	<!--<feature name="http://api.phonegap.com/1.0/network"/> -->
 
