@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<title>Quaker - History</title>
+<title>Quaker - graph</title>
 <link rel="stylesheet" href="http://quaker.vpixle.com/jQM/themes/quaker.css" />
 <link rel="stylesheet" href="http://quaker.vpixle.com/jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
@@ -22,25 +22,31 @@
 <script src="http://quaker.vpixle.com/jQM/js/jquery.mobile-1.2.0-alpha.1.min.js"></script>
 </head>
 <body>
-<div data-role="page" data-theme="g" id="qkr_233" >
+<div data-role="page" data-theme="g" id="qkr_237" >
   <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
     <h1>Quaker App</h1>
   </div><!-- /header -->
 <div data-role="content">
-  <ul data-role="listview" data-theme="g" data-dividertheme="g" data-inset="true">                         
-        <li data-role="list-divider">History</li>
-        <li><a href="http://quaker.vpixle.com/history/12-08-2012.html">12-08-2012</a></li>
-<li><a href="http://quaker.vpixle.com/history/11-08-2012.html">11-08-2012</a></li>
-<li><a href="http://quaker.vpixle.com/history/10-08-2012.html">10-08-2012</a></li>
-       </ul>              
-							<div class="ui-grid-a">                              
-      <div class="ui-block-a">                                      
-        <a href="graph.html" data-role="button" data-theme="b">View graph</a>                             
-      </div>                              
-      <div class="ui-block-b">                                      
-        <a href="#" data-role="button" data-theme="b">Export data</a>
-      </div>      
+  <p><div class="ui-body ui-body-f ui-btn-corner-all ui-shadow">  
+  <select data-native-menu="true" name="valuestoplot" id="valuestoplot">                                              
+    <option>Choose value to plot</option>      
+    <option value="performance">Performance</option>   
+    <option value="ph">PH Reading</option>                                              
+    <option value="brix">Brix Reading</option>                                              
+    <option value="concentration">Concentration</option> 
+  </select>                              
+  <div id="container" class="graf"></div>    
 </div>
+
+<script type="text/javascript" src="../jQM/js/highstock.js"></script>
+<script type="text/javascript" src="../jQM/js/graph.js"></script>
+<style rel="stylesheet" type="text/css">
+#container {
+  height:100%;
+  width:100%;
+  margin: 0 auto;
+}
+</style></p>              
 </div><!-- /content -->
 <div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
   <div data-role="navbar" data-iconpos="top">                    
