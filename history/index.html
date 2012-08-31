@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <title>Quaker - History</title>
-<link rel="stylesheet" href="http://quaker.vpixle.com/jQM/themes/quaker.css" />
+<link rel="stylesheet" href="http://quaker.vpixle.com/jQM/themes/quaker2.min.css" />
 <link rel="stylesheet" href="http://quaker.vpixle.com/jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
 <link rel="stylesheet" href="http://quaker.vpixle.com/jQM/css/custom.css" />
@@ -24,33 +24,36 @@
 <body>
 <div data-role="page" data-theme="g" id="qkr_233" >
   <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
-    <h1>Quaker App</h1>
+		  
+    <h1>History</h1>
   </div><!-- /header -->
 <div data-role="content">
-  <ul data-role="listview" data-theme="g" data-dividertheme="g" data-inset="true">                         
-        <li data-role="list-divider">History</li>
-        <li><a href="http://quaker.vpixle.com/history/12-08-2012.html">12-08-2012</a></li>
-<li><a href="http://quaker.vpixle.com/history/11-08-2012.html">11-08-2012</a></li>
-<li><a href="http://quaker.vpixle.com/history/10-08-2012.html">10-08-2012</a></li>
-       </ul>              
-							<div class="ui-grid-a">                              
+  <ul id="historyList" data-role="listview" data-theme="g" data-divider-theme="a" ></ul>
+		<br/>
+		<div class="ui-grid-a">                              
       <div class="ui-block-a">                                      
-        <a href="graph.html" data-role="button" data-theme="b">View graph</a>                             
+        <a href="#" data-role="button" data-theme="h">View graph</a>                             
       </div>                              
       <div class="ui-block-b">                                      
-        <a href="#" data-role="button" data-theme="b">Export data</a>
+        <a href="#" data-role="button" data-theme="h">Export data</a>
       </div>      
 </div>
 </div><!-- /content -->
 <div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
-  <div data-role="navbar" data-iconpos="top">                    
+  <div data-role="navbar" class="nav-glyphish">                    
     <ul>
-     <li><a href="../maintenance/" data-icon="grid">Maintenance</a></li> 
-     <li><a href="../troubleshooting/" data-icon="alert">Troubleshooting</a></li>
-     <li><a href="../site-setup/" data-icon="gear">Site Setup</a></li>
+     <li class="first"><a href="../maintenance/" id="maintenance" data-icon="custom"  class="ui-btn-active ui-state-persist">Maintenance</a></li> 
+     <li><a href="../troubleshooting/" id="trouble" data-icon="custom" >Troubleshooting</a></li>
+     <li class="last"><a href="../site-setup/" id="sitesetup" data-icon="custom"  >Site Setup</a></li>
     </ul>                
   </div><!-- /navbar -->            
 </div><!-- /footer -->
+<script>
+$('#qkr_233').live('pagebeforeshow', function(event) {
+  initDatabase();
+  historyList();
+});
+</script>
 </div><!-- /page -->  
 </body>
 </html>

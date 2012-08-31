@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <title>Quaker - Troubleshooting</title>
-<link rel="stylesheet" href="../jQM/themes/quaker.css" />
+<link rel="stylesheet" href="../jQM/themes/quaker2.min.css" />
 <link rel="stylesheet" href="../jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
 <link rel="stylesheet" href="../jQM/css/custom.css" />
@@ -25,10 +25,11 @@
 <body>
 <div data-role="page" data-theme="g" id="qkr_4" >
   <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
-    <h1>Quaker App</h1>
+		  
+    <h1>Troubleshooting</h1>
   </div><!-- /header -->
 <div data-role="content">
-  <ul data-role="listview" data-theme="g" data-dividertheme="g" data-inset="true">                         
+  <ul data-role="listview" data-theme="g" data-dividertheme="a">                         
         <li data-role="list-divider">Troubleshooting</li>
         <li><a href="foam/index.html">Foam</a></li>
 <li><a href="unacceptable-residue/index.html">Unacceptable Residue</a></li>
@@ -43,11 +44,11 @@
 							
 </div><!-- /content -->
 <div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
-  <div data-role="navbar" data-iconpos="top">                    
+  <div data-role="navbar" class="nav-glyphish">                    
     <ul>
-     <li><a href="../maintenance/index.html" data-icon="grid">Maintenance</a></li> 
-     <li><a href="index.html" data-icon="alert">Troubleshooting</a></li>
-     <li><a href="../site-setup/index.html" data-icon="gear">Site Setup</a></li>
+     <li class="first"><a href="../maintenance/index.html" id="maintenance" data-icon="custom"  >Maintenance</a></li> 
+     <li><a href="index.html" id="trouble" data-icon="custom" class="ui-btn-active ui-state-persist">Troubleshooting</a></li>
+     <li class="last"><a href="../site-setup/index.html" id="sitesetup" data-icon="custom"  >Site Setup</a></li>
     </ul>                
   </div><!-- /navbar -->            
 </div><!-- /footer -->

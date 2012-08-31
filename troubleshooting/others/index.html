@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <title>Quaker - Others</title>
-<link rel="stylesheet" href="../../jQM/themes/quaker.css" />
+<link rel="stylesheet" href="../../jQM/themes/quaker2.min.css" />
 <link rel="stylesheet" href="../../jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
 <link rel="stylesheet" href="../../jQM/css/custom.css" />
@@ -23,98 +23,71 @@
 <script src="../../jQM/js/jquery.mobile-1.2.0-alpha.1.min.js"></script>
 </head>
 <body>
-<div data-role="page" data-theme="g" id="qkr_14" data-add-back-btn="true">
+<div data-role="page" data-theme="g" id="qkr_14" >
   <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
-    <h1>Quaker App</h1>
+		  <a href="#" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a>
+    <h1>Others</h1>
   </div><!-- /header -->
 <div data-role="content">
- <div class="ui-li ui-li-divider ui-btn ui-bar-g ui-corner-top">Troubleshooting&nbsp;&raquo; </div>
- <div class="ui-body-d ui-corner-bottom ui-shadow">            
-  <div style="padding:0em 1em;">
-		<h2>Others</h2>
   <!-- outerTpl -->
-
-<div data-role="collapsible-set">
+<div data-role="collapsible-set" data-inset="false">
 <!-- ParentRow -->
-<div data-role="collapsible" data-collapsed="true" data-theme="h" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" class=".ui-shadow">
+<div data-role="collapsible" data-collapsed="true" data-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" class=".ui-shadow">
 <h3>Floating chips</h3>
 <ul data-role="listview" data-theme="g" data-divider-theme="g">
-<!-- rowTpl -->
-<li class="first">
-<a href="floating-chips/concentration-too-low.html"  >Concentration too low</a>
-
-</li>
-<!-- rowTpl -->
-<li>
-<a href="floating-chips/soaps-are-filtered-out.html"  >Soaps are filtered out</a>
-
-</li>
-<!-- rowTpl -->
-<li>
-<a href="floating-chips/chip-too-thin/operation.html"  >Chip too thin/operation</a>
-
-</li>
-<!-- rowTpl -->
-<li>
-<a href="floating-chips/instability.html"  >Instability</a>
-
-</li>
-<!-- rowTpl -->
-<li>
-<a href="floating-chips/very-dense-foam.html"  >Very dense foam</a>
-
-</li>
-<!-- rowTpl -->
-<li class="last">
-<a href="floating-chips/product.html"  >Product</a>
-
-</li>
+  <li class="first">
+    <a href="floating-chips/concentration-too-low.html" >Concentration too low</a>
+  </li>
+  <li>
+    <a href="floating-chips/soaps-are-filtered-out.html" >Soaps are filtered out</a>
+  </li>
+  <li>
+    <a href="floating-chips/chip-too-thin/operation.html" >Chip too thin/operation</a>
+  </li>
+  <li>
+    <a href="floating-chips/instability.html" >Instability</a>
+  </li>
+  <li>
+    <a href="floating-chips/very-dense-foam.html" >Very dense foam</a>
+  </li>
+  <li class="last">
+    <a href="floating-chips/product.html" >Product</a>
+  </li>
 
 </ul>
 
 </div><!-- /collapsible/ParentRow -->
 
 <!-- ParentRow -->
-<div data-role="collapsible" data-collapsed="true" data-theme="h" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" class=".ui-shadow">
+<div data-role="collapsible" data-collapsed="true" data-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" class=".ui-shadow">
 <h3>Seal and Paint compatibility</h3>
 <ul data-role="listview" data-theme="g" data-divider-theme="g">
-<!-- rowTpl -->
-<li class="first">
-<a href="seal-and-paint-compatibility/contamination.html"  >Contamination</a>
-
-</li>
-<!-- rowTpl -->
-<li>
-<a href="seal-and-paint-compatibility/wrong-seal-or-paint-choice.html"  >Wrong seal or paint choice</a>
-
-</li>
-<!-- rowTpl -->
-<li>
-<a href="seal-and-paint-compatibility/mechanical-wear-on-or-paint.html"  >Mechanical wear on or paint</a>
-
-</li>
-<!-- rowTpl -->
-<li class="last">
-<a href="seal-and-paint-compatibility/product.html"  >Product</a>
-
-</li>
+  <li class="first">
+    <a href="seal-and-paint-compatibility/contamination.html" >Contamination</a>
+  </li>
+  <li>
+    <a href="seal-and-paint-compatibility/wrong-seal-or-paint-choice.html" >Wrong seal or paint choice</a>
+  </li>
+  <li>
+    <a href="seal-and-paint-compatibility/mechanical-wear-on-or-paint.html" >Mechanical wear on or paint</a>
+  </li>
+  <li class="last">
+    <a href="seal-and-paint-compatibility/product.html" >Product</a>
+  </li>
 
 </ul>
 
 </div><!-- /collapsible/ParentRow -->
-
 
 
 </div><!-- /collapsible-set/outerTpl -->
-</div>
-		</div>
-</div><!-- /content -->
+
 <div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
-  <div data-role="navbar" data-iconpos="top">                    
+  <div data-role="navbar" class="nav-glyphish">                    
     <ul>
-     <li><a href="../../maintenance/index.html" data-icon="grid">Maintenance</a></li> 
-     <li><a href="../index.html" data-icon="alert">Troubleshooting</a></li>
-     <li><a href="../../site-setup/index.html" data-icon="gear">Site Setup</a></li>
+     <li class="first"><a href="../../maintenance/index.html" id="maintenance" data-icon="custom" >Maintenance</a></li> 
+     <li><a href="../index.html" id="trouble" data-icon="custom" class="ui-btn-active ui-state-persist">Troubleshooting</a></li>
+     <li class="last"><a href="../../site-setup/index.html" id="sitesetup" data-icon="custom" >Site Setup</a></li>
     </ul>                
   </div><!-- /navbar -->            
 </div><!-- /footer -->

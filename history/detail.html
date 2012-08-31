@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<base href="http://quaker.vpixle.com/" />
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+<link rel="apple-touch-startup-image" href="apple-touch-start.png">  
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="content-language" content="en" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>Quaker - History detail</title>
+<link rel="stylesheet" href="http://quaker.vpixle.com/jQM/themes/quaker2.min.css" />
+<link rel="stylesheet" href="http://quaker.vpixle.com/jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
+
+<link rel="stylesheet" href="http://quaker.vpixle.com/jQM/css/custom.css" />
+
+<script src="http://quaker.vpixle.com/jQM/js/jquery-1.7.2.min.js"></script>
+<script src="http://quaker.vpixle.com/jQM/js/mobileinit.js" type="text/javascript"></script>
+<script src="http://quaker.vpixle.com/jQM/js/ios-orientationchange-fix.min.js" type="text/javascript"></script>
+<script src="http://quaker.vpixle.com/jQM/js/application.js" type="text/javascript"></script>
+<script src="http://quaker.vpixle.com/jQM/js/jquery.mobile-1.2.0-alpha.1.min.js"></script>
+</head>
+<body>
+<div data-role="page" data-theme="g" id="qkr_235" >
+  <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
+		  <a href="#" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a>
+    <h1>History detail</h1>
+  </div><!-- /header -->
+<div data-role="content">
+  <form action="" >               
+    <h2 id="hmachine_ref" ></h2>
+    <div class="ui-grid-a">                              
+      <div class="ui-block-a" >
+        <div data-role="fieldcontain">
+          <label for="hdate">Date</label>
+          <input type="date" name="hdate" id="hdate" disabled />
+        </div>                                                          
+      </div>                              
+      <div class="ui-block-b" style="padding-left: 2em">                                                                                   
+        <div data-role="fieldcontain">                                                                    
+          <label for="hbrixfactor">Brix factor
+          </label>                                  
+          <input type="text" name="hbrixfactor" id="hbrixfactor" style="width:6em;" placeholder="" data-mini="true" step="0.1" data-theme="a" disabled />                                   
+        </div>                                                                   
+      </div>                      
+    </div>                        
+    <div data-role="fieldcontain">                                      
+      <label for="happearance">Appearance
+      </label>                                      
+      <select data-native-menu="true" name="happearance" id="happearance" disabled>                                              
+        <option>Choose one
+        </option>      
+        <option value="white">Milk white
+        </option>                                              
+        <option value="grey">Grey
+        </option>                                              
+        <option value="yellow">Milky yellow
+        </option>                                              
+        <option value="opaque">Opaque
+        </option>                                      
+      </select>                              
+    </div>          
+    <div data-role="fieldcontain">                                      
+      <label for="hperform">Performance
+      </label>                                      
+      <select data-native-menu="true" name="hperform" id="hperform" disabled>                                              
+        <option>Choose one
+        </option>      
+        <option value=1>Good
+        </option>                                              
+        <option value=2>OK
+        </option>                                              
+        <option value=3>Action Required
+        </option>                                              
+      </select>                              
+    </div>                                           
+    <div data-role="fieldcontain">                                                                   
+      <label for="hph">pH Reading
+      </label>                                        
+      <input type="range" name="hph" id="hph" min="0" max="14" step="0.1" data-highlight="true" data-track-theme="g" disabled />                              
+    </div>  
+    <div data-role="fieldcontain">                                                                   
+      <label for="hconc_brix">Brix reading
+      </label>                                        
+      <input type="range" name="hconc_brix" id="hconc_brix" min="0" max="30" step="0.1" data-highlight="true" data-track-theme="g" disabled />                              
+    </div>                         
+    <div data-role="fieldcontain" >                                                                    
+      <label for="hconc_percent">Concentration [%]
+      </label>                                  
+      <input type="text" name="hconc_percent" id="hconc_percent" placeholder="" data-mini="true" data-theme="a" disabled />                               
+    </div>  
+    <div data-role="fieldcontain" >                                                                    
+      <label for="hproduct_added_liter">Product added [dm&sup3;]
+      </label>                                  
+      <input type="number" name="hproduct_added_liter" id="hproduct_added_liter" value="0" min="0" step="1" disabled />                               
+    </div>
+    <div data-role="fieldcontain" >                                                                    
+      <label for="water_added">Water added [dm&sup3;]
+      </label>                                  
+      <input type="number" name="water_added" id="water_added" value="0" min="0" step="1" disabled />                               
+    </div>
+    <div data-role="fieldcontain">	
+      <label for="hadditive_added" class="select">Additive(s) added:
+      </label>	
+      <select name="hadditive_added" id="hadditive_added" multiple="multiple" size="4" data-native-menu="false" disabled >		
+        <option>Choose options
+        </option>		
+        <option value="biocide">Biocide
+        </option>		
+        <option value="antifoam">Antifoam
+        </option>		
+        <option value="detergent">Detergent
+        </option>		
+        <option value="other">Other
+        </option>	
+      </select>  
+    </div>  
+</form>            
+</div><!-- /content -->
+<div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
+  <div data-role="navbar" class="nav-glyphish">                    
+    <ul>
+     <li class="first"><a href="../maintenance/" id="maintenance" data-icon="custom"  class="ui-btn-active ui-state-persist">Maintenance</a></li> 
+     <li><a href="../troubleshooting/" id="trouble" data-icon="custom" >Troubleshooting</a></li>
+     <li class="last"><a href="../site-setup/" id="sitesetup" data-icon="custom"  >Site Setup</a></li>
+    </ul>                
+  </div><!-- /navbar -->            
+</div><!-- /footer -->
+<script>
+$('#qkr_235').live('pagebeforeshow', function(event) {
+    initDatabase();
+    var query = window.localStorage.getItem("query");
+    db.transaction(function(tx) {
+        tx.executeSql(query, [], function(tx, result) {
+            item = result.rows.item(0);
+            document.getElementById('hmachine_ref').innerHTML = item['machine_ref'];
+            $("#hbrixfactor").val(item['brixfactor']);
+            $("#hdate").val(item['date']);
+            $('#hph').val(item['ph']).slider('refresh');
+            $('#hconc_brix').val(item['conc_brix']).slider('refresh');
+            $('#hconc_percent').val(item['conc_percent']).slider('refresh');
+												$('#hproduct_added_liter').val(item['product_added_liter']);
+            $('#hwater_added').val(item['water_added']);
+            $('#happearance').val(item['appearance']).selectmenu('refresh');
+            $('#hperform').val(item['perform']).selectmenu('refresh');
+            $('#hadditive_added').val(item['additive_added']).selectmenu('refresh');                        
+        }, errorHandler);
+    });
+});
+
+</script>
+</div><!-- /page -->  
+</body>
+</html>

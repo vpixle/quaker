@@ -10,8 +10,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<title>Quaker - Maintenance</title>
-<link rel="stylesheet" href="../jQM/themes/quaker.css" />
+<title>Quaker - QuakerApp</title>
+<link rel="stylesheet" href="../jQM/themes/quaker2.min.css" />
 <link rel="stylesheet" href="../jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
 <link rel="stylesheet" href="../jQM/css/custom.css" />
@@ -25,25 +25,27 @@
 <body>
 <div data-role="page" data-theme="g" id="qkr_3" >
   <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
-    <h1>Quaker App</h1>
+		  
+    <h1>Maintenance</h1>
   </div><!-- /header -->
 <div data-role="content">
-  <p><ul data-role="listview" data-inset="true" data-split-icon="info" data-divider-theme="g" data-inset="true" data-split-theme="g">
-  <li data-role="list-divider">Please select a machine</li>
-  <li><a href="machine-a.html">Machine A</a><a href="../history/index.html"></a></li>
-  <li class="ui-disabled"><a href="#">Machine B</a><a href="#"></a></li>
-  <li class="ui-disabled"><a href="#">Machine C</a><a href="#"></a></li>
-</ul></p>              
+  <ul id="maintList" data-role="listview" data-split-icon="history" data-theme="g" data-divider-theme="a" data-split-theme="g"></ul>
 </div><!-- /content -->
 <div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
-  <div data-role="navbar" data-iconpos="top">                    
+  <div data-role="navbar" class="nav-glyphish">                    
     <ul>
-     <li><a href="index.html" data-icon="grid">Maintenance</a></li> 
-     <li><a href="../troubleshooting/index.html" data-icon="alert">Troubleshooting</a></li>
-     <li><a href="../site-setup/index.html" data-icon="gear">Site Setup</a></li>
+     <li class="first"><a href="index.html" id="maintenance" data-icon="custom" class="ui-btn-active ui-state-persist" >Maintenance</a></li> 
+     <li><a href="../troubleshooting/index.html" id="trouble" data-icon="custom" >Troubleshooting</a></li>
+     <li class="last"><a href="../site-setup/index.html" id="sitesetup" data-icon="custom"  >Site Setup</a></li>
     </ul>                
   </div><!-- /navbar -->            
 </div><!-- /footer -->
+<script>
+$('#qkr_3').live('pagebeforeshow', function(event) {
+  initDatabase();
+  mainteList();
+});
+</script>
 </div><!-- /page -->  
 </body>
 

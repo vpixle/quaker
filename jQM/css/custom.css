@@ -1,3 +1,58 @@
+/* Glyphish(like) icon */ 
+.nav-glyphish .ui-btn .ui-btn-inner {
+  padding-top: 40px !important;
+}
+.nav-glyphish .ui-btn .ui-icon {
+  width: 36px!important;
+  height: 36px!important;
+  margin-left: -15px !important;
+  box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  -webkit-box-shadow: none!important;
+  -webkit-border-radius: none !important;
+  border-radius: none !important;
+}
+#maintenance .ui-icon {background: url(images/maintenance36.png) 50% 50% no-repeat; background-size: 36px 36px;}
+#trouble .ui-icon {background: url(images/troubleshooting36.png) 50% 50% no-repeat; background-size: 36px 36px;}
+#sitesetup .ui-icon {background: url(images/sitesetup36.png) 50% 50% no-repeat; background-size: 36px 36px;}
+
+/* Custom icons */
+.ui-icon-sitesetup {
+  background-image: url("images/sitesetup18.png");
+}
+.ui-icon-trouble {
+  background-image: url("images/troubleshooting18.png");
+}
+.ui-icon-maintenance {
+  background-image: url("images/maintenance18.png");
+}
+.ui-icon-history {
+  background-image: url("images/history.png");
+}
+/* Custom highres icons */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .ui-icon-sitesetup {
+    background-image: url("images/sitesetup36.png");
+    background-size: 18px 18px;
+  }
+  .ui-icon-trouble {
+    background-image: url("images/troubleshooting36.png");
+    background-size: 18px 18px;
+  }
+  .ui-icon-maintenance {
+    background-image: url("images/maintenance36.png");
+    background-size: 18px 18px;
+  }
+  .ui-icon-history {
+  background-image: url("images/time36w.png");
+  }
+
+}
+
+.ui-collapsible-set {
+   margin: -1em 0;
+}
+
 /***************************************
  *  Item Box
  ****************************************/
@@ -21,23 +76,13 @@
   -moz-border-radius: .6em;
   -webkit-border-radius: .6em;
 }
-/***************************************
- *  CSS3 pattern
- ****************************************/
-.ui-body-g{
-  background-color: #125687;
-  background-image: 
-  -webkit-gradient(linear, 100% 0%, 0% 100%, 
-  from(transparent), 
-  color-stop(0.15, transparent),  
-  color-stop(0.15, rgba(255,200,46,0.75)), 
-  color-stop(0.50, rgba(255,200,46,0.75)), 
-  color-stop(0.50, transparent), 
-  color-stop(0.65, transparent),
-  color-stop(0.65, rgba(255,200,46,0.75)),  
-  to(rgba(255,288,46,0.75)));
-  ffbackground-color: #125687;
-  -webkit-background-size: 10px 10px
+
+
+.ui-btn-active { 
+  color: #333333 !important; 
+  background: none !important; 
+  background-color: #FFC82E !important;
+  
 }
 
 .ui-field-contain div.ui-slider-switch { width: 11em; }

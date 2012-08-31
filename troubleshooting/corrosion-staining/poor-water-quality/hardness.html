@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <title>Quaker - Hardness</title>
-<link rel="stylesheet" href="../../../jQM/themes/quaker.css" />
+<link rel="stylesheet" href="../../../jQM/themes/quaker2.min.css" />
 <link rel="stylesheet" href="../../../jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
 <link rel="stylesheet" href="../../../jQM/css/custom.css" />
@@ -23,25 +23,21 @@
 <script src="../../../jQM/js/jquery.mobile-1.2.0-alpha.1.min.js"></script>
 </head>
 <body>
-<div data-role="page" data-theme="g" id="qkr_129" data-add-back-btn="true">
+<div data-role="page" data-theme="g" id="qkr_129" >
   <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
-    <h1>Quaker App</h1>
+		  <a href="#" data-icon="arrow-l" data-iconpos="notext" data-rel="back"></a>
+    <h1>Hardness</h1>
   </div><!-- /header -->
 <div data-role="content">
- <div class="ui-li ui-li-divider ui-btn ui-bar-g ui-corner-top">Corrosion / staining&nbsp;&raquo; Poor water Quality&nbsp;&raquo; </div>
- <div class="ui-body-d ui-corner-bottom ui-shadow">            
-  <div style="padding:0em 1em;">
-		<h2>Hardness</h2>
-  <div class="item">Check with hardness strip. Is water quality consistent?</div>              
-	</div>	
-	</div>	
+ <h2>Hardness</h2>
+ Check with hardness strip. Is water quality consistent?              
 </div><!-- /content -->
 <div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
-  <div data-role="navbar" data-iconpos="top">                    
+  <div data-role="navbar" class="nav-glyphish">                    
     <ul>
-     <li><a href="../../../maintenance/index.html" data-icon="grid">Maintenance</a></li> 
-     <li><a href="../../index.html" data-icon="alert">Troubleshooting</a></li>
-     <li><a href="../../../site-setup/index.html" data-icon="gear">Site Setup</a></li>
+     <li class="first"><a href="../../../maintenance/index.html" id="maintenance" data-icon="custom" >Maintenance</a></li> 
+     <li><a href="../../index.html" id="trouble" data-icon="custom" class="ui-btn-active ui-state-persist">Troubleshooting</a></li>
+     <li class="last"><a href="../../../site-setup/index.html" id="sitesetup" data-icon="custom" >Site Setup</a></li>
     </ul>                
   </div><!-- /navbar -->            
 </div><!-- /footer -->

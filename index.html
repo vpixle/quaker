@@ -10,8 +10,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<title>Quaker - Quaker App</title>
-<link rel="stylesheet" href="jQM/themes/quaker.css" />
+<title>Quaker - QuakerApp</title>
+<link rel="stylesheet" href="jQM/themes/quaker2.min.css" />
 <link rel="stylesheet" href="jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
 <link rel="stylesheet" href="jQM/css/custom.css" />
@@ -25,20 +25,34 @@
 <body>
 <div data-role="page" data-theme="g" id="qkr_1" >
   <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
-    <h1>Quaker App</h1>
+		  
+    <h1>Home</h1>
   </div><!-- /header -->
 <div data-role="content">
-  <div class="item" style="text-align:center"><img src="images/quakerLOGO.png" style=" width: 100%; height: auto; max-width: 350px;" /></div>              
-</div><!-- /content -->
+<br/><br/><br/>
+<img class="imgcenter" src="jQM/assets/quakerLOGO.gif" />
 <div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
-  <div data-role="navbar" data-iconpos="top">                    
+  <div data-role="navbar" class="nav-glyphish">                    
     <ul>
-     <li><a href="maintenance/index.html" data-icon="grid">Maintenance</a></li> 
-     <li><a href="troubleshooting/index.html" data-icon="alert">Troubleshooting</a></li>
-     <li><a href="site-setup/index.html" data-icon="gear">Site Setup</a></li>
+     <li class="first"><a href="maintenance/index.html" id="maintenance" data-icon="custom"  >Maintenance</a></li> 
+     <li><a href="troubleshooting/index.html" id="trouble" data-icon="custom" >Troubleshooting</a></li>
+     <li class="last"><a href="site-setup/index.html" id="sitesetup" data-icon="custom"  >Site Setup</a></li>
     </ul>                
   </div><!-- /navbar -->            
 </div><!-- /footer -->
+<style type="text/css">
+.imgcenter
+   {
+   display:block; 
+   margin:0 auto; 
+   text-align:center; 
+   } 
+</style>
+<script>
+$('#qkr_1').live('pageinit', function(event) {
+   $.mobile.changePage("maintenance/index.html", 'fade', false, false);
+});
+</script>
 </div><!-- /page -->  
 </body>
 

@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <title>Quaker - Site Setup</title>
-<link rel="stylesheet" href="../jQM/themes/quaker.css" />
+<link rel="stylesheet" href="../jQM/themes/quaker2.min.css" />
 <link rel="stylesheet" href="../jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
 <link rel="stylesheet" href="../jQM/css/custom.css" />
@@ -25,27 +25,27 @@
 <body>
 <div data-role="page" data-theme="g" id="qkr_5">
   <div data-role="header" data-theme="g" data-position="fixed" data-tap-toggle="false" >
-    <h1>Quaker App</h1>
-				<a href="#" data-role="button" data-icon="plus" class="ui-btn-right">Add</a>
+    <h1>Site Setup</h1>
+				<a href="#" data-role="button" data-icon="plus" class="ui-btn-right" data-iconpos="notext" onclick="newSiteRecord();">Add</a>
   </div><!-- /header -->
 <div data-role="content">
-  <p><ul data-role="listview" data-divider-theme="g" data-inset="true">
-  <li data-role="list-divider">Please select a machine</li>
-  <li><a href="machine-a.html">Machine A</a></li>
-  <li><a href="#">Machine B</a></li>
-  <li><a href="#">Machine C</a></li>
-</ul>
-</p>              
+  <ul id="siterecords" data-role="listview" data-theme="g" data-divider-theme="a" ></ul>
 </div><!-- /content -->
 <div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
-  <div data-role="navbar" data-iconpos="top">                    
+  <div data-role="navbar" class="nav-glyphish">                    
     <ul>
-     <li><a href="../maintenance/index.html" data-icon="grid">Maintenance</a></li> 
-     <li><a href="../troubleshooting/index.html" data-icon="alert">Troubleshooting</a></li>
-     <li><a href="index.html" data-icon="gear">Site Setup</a></li>
+     <li class="first"><a href="../maintenance/index.html" id="maintenance" data-icon="custom"  >Maintenance</a></li> 
+     <li><a href="../troubleshooting/index.html" id="trouble" data-icon="custom" >Troubleshooting</a></li>
+     <li class="last"><a href="index.html" id="sitesetup" data-icon="custom" class="ui-btn-active ui-state-persist" >Site Setup</a></li>
     </ul>                
   </div><!-- /navbar -->            
 </div><!-- /footer -->
+<script>
+$('#qkr_5').live('pagebeforeshow', function(event) {
+  initDatabase();
+  showSiteRecords();
+});	
+</script>
 </div><!-- /page -->  
 </body>
 
