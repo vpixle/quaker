@@ -1,4 +1,3 @@
-/* Glyphish(like) icon */ 
 .nav-glyphish .ui-btn .ui-btn-inner {
   padding-top: 40px !important;
 }
@@ -82,8 +81,29 @@
   color: #333333 !important; 
   background: none !important; 
   background-color: #FFC82E !important;
-  
+  box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  -webkit-box-shadow: none!important;
+  -webkit-border-radius: none !important;
+  border-radius: none !important;
+  /*Edited shadow by Petr*/
+  text-shadow:0 1px 1px #FFC82E;
 }
 
 .ui-field-contain div.ui-slider-switch { width: 11em; }
-/*.longer-switch .ui-slider-switch { width: 15em } */
+/*.longer-switch .ui-slider-switch { width: 15em } */ 
+
+/* upravy by Petr */
+
+.ui-title {
+  margin:.6em 10% .8em;     /*10% by nemelo zasahovat do backbuttonu*/     
+}
+
+[data-role="fieldcontain"] label{
+  font-size:90%;
+  width:80%; 
+}
+
+.ui-navbar a.ui-btn{
+  font-weight:normal;                   
+} 

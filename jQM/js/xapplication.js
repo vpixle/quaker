@@ -9,6 +9,7 @@ $(document).live("pageinit", function(event){
     newConc = roundNumber(newConc,2)
     $("#conc_percent").val(newConc);
   });
+  
 });
 
 // Volani delete vymazu stroje ze site 
@@ -48,22 +49,24 @@ function createTables(){
 /* ADD SiteRrecord */ 
 function newSiteRecord() {
   initDatabase();
-    var machine_name = 'New Machine';
+  var machine_name = 'New Machine';
   var query ='INSERT INTO site_settings (machine_ref, brixfactor) VALUES (?,?)';
     db.transaction(function(tx) {
         tx.executeSql(query, [machine_name , 1], function(tx, result) {
-            console.log("Record added");
+          window.localStorage.setItem("the_id", result.insertId);  
+          console.log("Record added");
       }, 
         errorHandler);
     });
-  showSiteRecords();
+  //showSiteRecords();
+  $.mobile.changePage("../site-setup/machine-detail.html", 'fade', true, true);
 }
 
 // SELECT all site records and display them 
 function showSiteRecords() {
-    initDatabase();
+  initDatabase();
   document.getElementById('siterecords').innerHTML = '<li data-role="list-divider">Please select a machine</li>';
-    var query = 'SELECT * FROM site_settings'
+  var query = 'SELECT * FROM site_settings'
   db.transaction(function(tx) {
         tx.executeSql( query, [], function(tx, result) {
             if (result.rows.length) {
@@ -124,7 +127,7 @@ function addReadings(id, machine, bx) {
                tx.executeSql('INSERT INTO readings (machine_id, machine_ref, date, brixfactor) VALUES (?,?,?,?)', [id, machine, datum, bx], function(tx, result) {
                console.log("Readings added");
                window.localStorage.setItem("the_id", result.insertId);
-               $.mobile.changePage("readings.html", 'fade', true, true);
+               $.mobile.changePage("http://quaker.vpixle.com/maintenance/readings.html", 'fade', true, true);
         }, errorHandler);
       });
         }, errorHandler);
@@ -136,15 +139,15 @@ function callHistory(id, machine){
   initDatabase();
   window.localStorage.setItem("the_id", id);
   window.localStorage.setItem("machine", machine);
-  $.mobile.changePage("/history/index.html", 'fade', true, true);
+  $.mobile.changePage("http://quaker.vpixle.com/history/", 'fade', true, false);
 }
 
 // SELECT all history records and display them 
 function historyList() {
     initDatabase();
-  id = window.localStorage.getItem("the_id");
+    id = window.localStorage.getItem("the_id");
     machine = window.localStorage.getItem("machine"); 
-    query = 'SELECT id, machine_id, date FROM readings WHERE machine_id="' + id + '"'; 
+    query = 'SELECT id, machine_id, date FROM readings WHERE machine_id="' + id + '" ORDER BY "date" ASC'; 
     document.getElementById('historyList').innerHTML = '<li data-role="list-divider">'+ machine +'</li>';
     db.transaction(function(tx) {
         tx.executeSql(query, [], function(tx, result) {
@@ -168,14 +171,14 @@ function getHistDetail (id){
   initDatabase();
   query = 'SELECT * FROM readings WHERE id="' + id + '\"';
   window.localStorage.setItem("query", query); 
-  $.mobile.changePage("detail.html", 'fade', true, true);   
+  $.mobile.changePage("http://quaker.vpixle.com/history/detail.html", 'fade', true, true);   
 }
 
 // Jump2machine
 function jump2machine (id) {
     initDatabase();
   window.localStorage.setItem("the_id", id);
-    $.mobile.changePage("machine-detail.html", 'fade', true, true);
+    $.mobile.changePage("http://quaker.vpixle.com/site-setup/machine-detail.html", 'fade', true, true);
 }
 
 // Delete Machine from Site 
@@ -185,6 +188,13 @@ function deleteSiteRecord(id) {
       showSiteRecords()
     }, errorHandler);
   });
+}
+
+//jump2graph();
+function jump2graph() {
+  $.mobile.changePage("graph.html", 'fade', true, true);
+  //id = window.localStorage.getItem("the_id");
+  //machine
 }
 
 // ErrorHandrer
@@ -202,15 +212,26 @@ function errorHandler(transaction, error){
 /***
 **** DELETE DB TABLE ** 
 ***/
-
-function dropTables(){
-  db.transaction(
-    function (tx) {tx.executeSql('DROP TABLE site_settings;', [], nullDataHandler, errorHandler);
+function dropTables() {
+    db.transaction(
+    function(tx) {
+        //tx.executeSql('DROP TABLE site_settings;', [], nullDataHandler, errorHandler);
         tx.executeSql('DROP TABLE readings;', [], nullDataHandler, errorHandler);
+    });
+    console.log("Tables have been dropped");
+    initDatabase();
+    for (var i = 1; i <= 31; i++) {
+        var datum = '2012-08-' + i;
+        var id = 1;
+        var ph = Math.floor((Math.random() * 14));
+        var brix = Math.floor((Math.random() * 30));
+        var conc = Math.floor((Math.random() * 30) + 1);
+        db.transaction(function(tx) {
+            tx.executeSql('INSERT INTO readings (machine_id, machine_ref, date, ph, conc_brix, conc_percent) VALUES (?,?,?,?,?,?)', [id, 'Mazak', datum, ph, brix, conc], function(tx, result) {}, errorHandler);
+        });
     }
-  );
-  console.log("Tables have been dropped");
 }
+
 
 function nullDataHandler(){
   //db = openDatabase("QUAKERDB", "1.0", "QuakerApp Database", 200000);

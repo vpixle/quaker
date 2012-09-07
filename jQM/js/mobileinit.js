@@ -9,10 +9,10 @@
 */
 $(document).bind('mobileinit', function(event){
   // apply overrides here
-  $.mobile.loadingMessage = "Nahrávám ...";
+  $.mobile.loadingMessage = "Loading ...";
   //$.mobile.loadingMessageTheme = "a"
   $.mobile.loadingMessageTextVisible = false; 
-  $.mobile.pageLoadErrorMessage = "Stránka nenalezena"
+  $.mobile.pageLoadErrorMessage = "Page not found"
   //$.mobile.pageLoadErrorMessageTheme = "e"
   $.mobile.page.prototype.options.domCache = true;
   $.mobile.allowCrossDomainPages = true;
@@ -37,7 +37,7 @@ $(document).bind('mobileinit', function(event){
   //$.mobile.listview.prototype.options.splitTheme   = "c";
   //$.mobile.listview.prototype.options.countTheme   = "c";
   //$.mobile.listview.prototype.options.filterTheme  = "c";
-  $.mobile.listview.prototype.options.filterPlaceholder = "Vyhledávání ...";
+  $.mobile.listview.prototype.options.filterPlaceholder = "Searching ...";
   
   //$.mobile.dialog.prototype.options.theme
   //$.mobile.selectmenu.prototype.options.menuPageTheme

@@ -1,26 +1,32 @@
-
-<!doctype html>
+﻿<!doctype html>
 <html>
+
 <head>
-<base href="http://quaker.vpixle.com/" />
-<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
-<link rel="apple-touch-startup-image" href="apple-touch-start.png">  
+<base  />
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.html">
+<link rel="apple-touch-startup-image" href="apple-touch-start.html">  
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <meta http-equiv="content-language" content="en" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<title>Quaker - Machine Detail</title>
-<link rel="stylesheet" href="http://quaker.vpixle.com/jQM/themes/quaker2.min.css" />
-<link rel="stylesheet" href="http://quaker.vpixle.com/jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
+<title>Quaker - QuakerApp</title>
+<link rel="stylesheet" href="jQM/themes/quaker2.min.css" />
+<link rel="stylesheet" href="jQM/css/jquery.mobile-1.2.0-alpha.1.min.css" />
 
-<link rel="stylesheet" href="http://quaker.vpixle.com/jQM/css/custom.css" />
+<link rel="stylesheet" href="jQM/css/custom.css" />
 
-<script src="http://quaker.vpixle.com/jQM/js/jquery-1.7.2.min.js"></script>
-<script src="http://quaker.vpixle.com/jQM/js/mobileinit.js" type="text/javascript"></script>
-<script src="http://quaker.vpixle.com/jQM/js/ios-orientationchange-fix.min.js" type="text/javascript"></script>
-<script src="http://quaker.vpixle.com/jQM/js/application.js" type="text/javascript"></script>
-<script src="http://quaker.vpixle.com/jQM/js/jquery.mobile-1.2.0-alpha.1.min.js"></script>
+<script src="jQM/js/jquery-1.7.2.min.js"></script>
+<script src="jQM/js/mobileinit.js" type="text/javascript"></script>
+<script src="jQM/js/ios-orientationchange-fix.min.js" type="text/javascript"></script>
+<script src="jQM/js/application.js" type="text/javascript"></script>
+<script src="jQM/js/jquery.mobile-1.2.0-alpha.1.min.js"></script>
+<script src="jQM/js/jquery.flot.js" type="text/javascript"></script>
+<script src="jQM/js/jquery.flot.crosshair.js" type="text/javascript"></script>
+<script src="jQM/js/jquery.flot.resize.js" type="text/javascript"></script>
+
+
+
 </head>
 <body>
 	<div data-role="page" data-theme="g" id="qkr_232">
@@ -31,7 +37,7 @@
 		<br/>
 		<form action="" >
 			<div data-role="collapsible-set">
-				<div data-role="collapsible" data-collapsed="false" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-content-theme="c">
+				<div data-role="collapsible" data-collapsed="true" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-content-theme="c">
 					<h3>Machine details</h3>
 					<div data-role="fieldcontain">
 						<label for="smachine_ref">System Reference</label>
@@ -46,11 +52,11 @@
 						<input type="number" name="sbrixfactor" id="sbrixfactor" min="0" step=".1"/>
 					</div>
 					<div data-role="fieldcontain">
-						<label for="starget_min">Target fluid concentration [%]</label>
+						<label for="starget_min">Target fluid concentration [min %]</label>
 						<input type="number" name="starget_min" id="starget_min" min="0" max="100" />
 					</div>
 					<div data-role="fieldcontain">
-						<label for="starget_max">&nbsp;</label>
+						<label for="starget_max">Target fluid concentration [max %]</label>
 						<input type="number" name="starget_max" id="starget_max" min="0" max="100" />
 					</div>
 				</div><!-- /header -->	
@@ -79,7 +85,7 @@
 					</div>
 
 					<div data-role="fieldcontain">
-						<label for="soperation" >Main Opreations</label>
+						<label for="soperation" >Main Operations</label>
 						<select name="soperation" id="soperation" multiple="multiple" data-native-menu="false">                                       
 							<option>Choose operation</option>
 							<option value="turning">Turning</option>                                       
@@ -181,10 +187,10 @@
 					</div>
 				</div><!-- /fluid -->
 			</div><!-- /collapsible-set -->
-			</br>
+			</br></br></br>
 			<div class="ui-grid-a">                              
 				<div class="ui-block-a">                                      
-					<a href="#" onclick="resetmachine();" data-theme="b" data-icon="delete" data-iconpos="left" data-role="button">Reset</a>
+					<a href="#" data-rel="back" data-theme="b" data-icon="delete" data-iconpos="left" data-role="button">Dismiss</a>
 				</div>                              
 				<div class="ui-block-b">                                      
 					<a href="#" onclick="savemachine();" data-theme="g" data-icon="check" data-iconpos="left" data-role="button">Save</a>
@@ -195,9 +201,9 @@
 	<div data-theme="h" data-role="footer" data-position="fixed" data-tap-toggle="false">                
   <div data-role="navbar" class="nav-glyphish">                    
     <ul>
-     <li class="first"><a href="../maintenance/" id="maintenance" data-icon="custom"  >Maintenance</a></li> 
-     <li><a href="../troubleshooting/" id="trouble" data-icon="custom" >Troubleshooting</a></li>
-     <li class="last"><a href="../site-setup/" id="sitesetup" data-icon="custom" class="ui-btn-active ui-state-persist" >Site Setup</a></li>
+     <li class="first" disable><a href="#" id="maintenance" data-icon="custom"  >Maintenance</a></li> 
+     <li disable><a href="#" id="trouble" data-icon="custom" >Troubleshooting</a></li>
+     <li class="last" disable><a href="#" id="sitesetup" data-icon="custom" class="ui-btn-active ui-state-persist" >Site Setup</a></li>
     </ul>                
   </div><!-- /navbar -->            
 </div><!-- /footer -->
@@ -256,7 +262,7 @@ function savemachine() {
 
 		tx.executeSql("UPDATE site_settings SET filter= ? WHERE id = ?", [sfilter.value, the_id], null, errorHandler);
   });
-$.mobile.changePage("../site-setup/index.html");
+$.mobile.changePage("../site-setup/");
 }
 
 function resetmachine() {
